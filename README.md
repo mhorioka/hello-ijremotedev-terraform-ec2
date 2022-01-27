@@ -1,4 +1,4 @@
-# About his project
+# About this project
 
 Sample Code to set up and test a remote development environment with IntelliJ based IDE on AWS EC2 using Terraform
 
