@@ -38,7 +38,7 @@ This script is used to initialize EC2 instance upon creation. It does following:
 - Run "terraform destroy" to clean up IntelliJ IDEA remote dev environment on your AWS account
 
 
-#References
+# References
 - IntelliJ IDEA documentation 
   - EN: https://www.jetbrains.com/help/idea/remote-development-a.html#use_local_ide
   - JP: https://pleiades.io/help/idea/remote-development-a.html#use_local_ide
