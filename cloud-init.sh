@@ -75,7 +75,7 @@ sudo sysctl -p --system
 /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -s -c file:/opt/aws/amazon-cloudwatch-agent/bin/my_config.json
 
 #set up remote IDE backend and project
-IDE_URL=https://download.jetbrains.com/idea/ideaIU-2021.3.1.tar.gz
+IDE_URL=https://download.jetbrains.com/idea/ideaIU-2021.3.2.tar.gz
 LOGIN_USER=ec2-user
 LOGIN_GROUP=ec2-user
 LOGIN_USER_HOME=/home/${LOGIN_USER}
