@@ -32,8 +32,7 @@ This script is used to initialize EC2 instance upon creation. It does following:
 - Run "terraform apply" to create IntelliJ IDEA remote dev environment on your AWS account
   - Check the external IP address of the EC2 instance from the result of the "terraform apply" command OR AWS console   
   - Connect to the instance with "ssh ec2-user@\<external IP address of the instance>" and wait for cloud-init.sh completes (you can check the progress by "sudo tail -f /var/log/cloud-init-output.log)
-  - From EC2 instaqnce, start IntelliJ IDEA remote server (remote-dev-server.sh run <path/to/project> --ssh-link-host <host>
-)
+  - From EC2 instance, start IntelliJ IDEA remote server (remote-dev-server.sh run <path/to/project> --ssh-link-host \<host>)
   - Connect to IntelliJ IDEA remote server from JetBrains Gateway
   - Access CloudWatch "remotedev-dashboard" dashboard to check CPU, memory, disk utilization in your test environment 
 - Run "terraform destroy" to clean up IntelliJ IDEA remote dev environment on your AWS account
