@@ -9,8 +9,8 @@ yum install -y java-11-amazon-corretto-headless
 
 #CloudWatch
 yum install -y amazon-cloudwatch-agent
-yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-yum install -y collectd
+#yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+#yum install -y collectd
 
 # Write Cloudwatch agent configuration file
 cat >> /opt/aws/amazon-cloudwatch-agent/bin/my_config.json <<\EOF
@@ -75,7 +75,8 @@ sudo sysctl -p --system
 /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -s -c file:/opt/aws/amazon-cloudwatch-agent/bin/my_config.json
 
 #set up remote IDE backend and project
-IDE_URL=https://download.jetbrains.com/idea/ideaIU-2021.3.2.tar.gz
+#IDE_URL=https://download.jetbrains.com/idea/ideaIU-2021.3.2.tar.gz
+IDE_URL=https://download.jetbrains.com/idea/ideaIU-221.4501.155.tar.gz
 LOGIN_USER=ec2-user
 LOGIN_GROUP=ec2-user
 LOGIN_USER_HOME=/home/${LOGIN_USER}
