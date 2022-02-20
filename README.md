@@ -15,7 +15,7 @@ Sample Code to set up and test a remote development environment with IntelliJ ba
 ## cloud-init.sh
 This script is used to initialize EC2 instance upon creation. It does following:
 - Install required OS packages and libraries
-- Install JetBrains IDE
+- Install JetBrains IDE (Change IDE_URL if you want to try another version)
 - Download and setup project developed with JetBrains IDE
 
 # How to use
@@ -30,6 +30,7 @@ This script is used to initialize EC2 instance upon creation. It does following:
 - Review and edit (if needed) variables.tf for SSH key, EC2 setup, allowed ip address for SSH connection, etc
 - Run "terraform init" to initialize your environment
 - Run "terraform apply" to create IntelliJ IDEA remote dev environment on your AWS account
+  - You can override variables in variable.tf like "terraform apply -var 'aws_profile=my_aws_profile'"
   - Check the external IP address of the EC2 instance from the result of the "terraform apply" command OR AWS console   
   - Connect to the instance with "ssh ec2-user@\<external IP address of the instance>" and wait for cloud-init.sh completes (you can check the progress by "sudo tail -f /var/log/cloud-init-output.log)
   - From EC2 instance, start IntelliJ IDEA remote server (remote-dev-server.sh run <path/to/project> --ssh-link-host \<host>)
