@@ -76,7 +76,7 @@ sudo sysctl -p --system
 
 #set up remote IDE backend and project
 #IDE_URL=https://download.jetbrains.com/idea/ideaIU-2021.3.2.tar.gz
-IDE_URL=https://download.jetbrains.com/idea/ideaIU-221.4906.8.tar.gz
+IDE_URL=https://download.jetbrains.com/idea/ideaIU-221.5080.93.tar.gz
 LOGIN_USER=ec2-user
 LOGIN_GROUP=ec2-user
 LOGIN_USER_HOME=/home/${LOGIN_USER}
